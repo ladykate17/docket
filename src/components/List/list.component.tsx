@@ -60,7 +60,7 @@ const PunList: React.FC = () => {
 
   return (
     <div>
-      <h1>PUN-TASTIC LIST</h1>
+      <h1>A PUN-TASTIC LIST</h1>
       <ul>
         {items.map((item, index) => (
           <li key={index}>{item.pun}<Like /></li>
