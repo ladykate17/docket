@@ -2,6 +2,8 @@
 
 A quick frontend application to provide a short code example to work off of. The application displays a list of 'PUN-TASTIC' puns that a user can like and unlike. It contains a 'List' component that would be intended to hold and manage the overall list of puns and a 'Like' component that holds the like element and functionality. 
 
+I choose to create this basic app was to show understanding of React creating React components and React state, as well as show understanding of making styling changes based on state change. 
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
