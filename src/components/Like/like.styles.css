@@ -1,0 +1,14 @@
+.likesContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.likes {
+    size: 6px;
+    padding: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

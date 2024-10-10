@@ -24,11 +24,12 @@ const Like: React.FC<LikeProps> = ({}) => {
     }
 
     return (
-        <>
+        <div className="likesContainer">
             <LikeButton $liked={liked} onClick={() => handleLike()}>
                 {liked ? "Liked" : "Like"}
             </LikeButton>
-        </>
+            <div className='likes'>{liked ? "1 Like" : "0 Likes"}</div>
+        </div>
     );
 };
 
