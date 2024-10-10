@@ -1,6 +1,6 @@
 # PUN-TASTIC
 
-A quick frontend application to provide a short code example to work off of. The application displays a list of 'PUN-TASTIC' puns that a user can mark as liked. IT contains a List component that would be intended to hold and manage the overall list of puns and a Like component that holds the like element and functionality. 
+A quick frontend application to provide a short code example to work off of. The application displays a list of 'PUN-TASTIC' puns that a user can like and unlike. It contains a 'List' component that would be intended to hold and manage the overall list of puns and a 'Like' component that holds the like element and functionality. 
 
 ## Getting Started with Create React App
 
