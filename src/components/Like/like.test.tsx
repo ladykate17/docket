@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import Like from './like.component';
 
 test('renders like component', () => {
@@ -9,8 +9,8 @@ test('renders like component', () => {
 
 test('changes button text to liked after click', () => {
   render(<Like />);
-  const likeButtonElement = screen.getByLabelText("button");
-  likeButtonElement.click();
+  const likeButtonElement = screen.getByText("Like");
+  fireEvent.click(likeButtonElement);
   const likedButtonElement = screen.getByText("Liked");
   expect(likedButtonElement).toBeInTheDocument();
 });
