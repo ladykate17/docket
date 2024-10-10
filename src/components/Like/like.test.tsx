@@ -41,3 +41,5 @@ test('changes button color back to white after second click', () => {
   fireEvent.click(likeButtonElement);
   expect(likeButtonElement).toHaveStyle("background-color: #fff");
 });
+
+test('should iterate the number of likes', () => {});

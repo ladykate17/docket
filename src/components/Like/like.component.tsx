@@ -2,8 +2,8 @@ import React from 'react';
 import './like.styles.css';
 import styled from 'styled-components';
 
-const LikeButton = styled.button<{ $liked?: boolean; }>`
-    background-color: ${props => props.$liked ? "#f9c22a" : "#fff"};
+const LikeButton = styled.button`
+    background-color: "#fff";
     border: 1px solid #ccc;
     border-radius: 5px;
     color: #333;
@@ -17,18 +17,18 @@ interface LikeProps {
 }
 
 const Like: React.FC<LikeProps> = ({}) => {
-    let [liked, setLiked] = React.useState(false);
+    let [likedCount, setLikedCount] = React.useState(0);
 
     let handleLike = () => {
-        setLiked(!liked);
+        setLikedCount(likedCount + 1);
     }
 
     return (
         <div className="likesContainer">
-            <LikeButton $liked={liked} onClick={() => handleLike()}>
-                {liked ? "Liked" : "Like"}
+            <LikeButton onClick={() => handleLike()}>
+                Add Like
             </LikeButton>
-            <div className='likes'>{liked ? "1 Like" : "0 Likes"}</div>
+            <div className='likes'>{likedCount} Likes</div>
         </div>
     );
 };

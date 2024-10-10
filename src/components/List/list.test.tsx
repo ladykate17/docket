@@ -6,3 +6,5 @@ test('renders the List component', () => {
   const listItemElement = screen.getByText(/PUN-TASTIC/i);
   expect(listItemElement).toBeInTheDocument();
 });
+
+test('should order list items by nuber of likes', () => {});
