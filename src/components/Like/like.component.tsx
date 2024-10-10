@@ -13,14 +13,14 @@ const LikeButton = styled.button<{ $liked?: boolean; }>`
 `;
 
 interface LikeProps {
-    //liked: boolean;
+    //liked: boolean; // Use later for persisted state
 }
 
 const Like: React.FC<LikeProps> = ({}) => {
-    let [liked, setMode] = React.useState(false);
+    let [liked, setLiked] = React.useState(false);
 
     let handleLike = () => {
-        setMode(!liked);
+        setLiked(!liked);
     }
 
     return (
