@@ -13,19 +13,16 @@ const LikeButton = styled.button`
 `;
 
 interface LikeProps {
+    likedCount: number;
+    clickFunc: () => void;
     //liked: boolean; // Use later for persisted state
 }
 
-const Like: React.FC<LikeProps> = ({}) => {
-    let [likedCount, setLikedCount] = React.useState(0);
-
-    let handleLike = () => {
-        setLikedCount(likedCount + 1);
-    }
+const Like: React.FC<LikeProps> = ({likedCount, clickFunc}) => {
 
     return (
         <div className="likesContainer">
-            <LikeButton onClick={() => handleLike()}>
+            <LikeButton onClick={clickFunc}>
                 Add Like
             </LikeButton>
             <div className='likes'>{likedCount} Likes</div>

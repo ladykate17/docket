@@ -46,15 +46,37 @@ const dummyData = [
   ];
 
 interface Pun {
+  id: number;
   pun: string;
+  likes: number;
 }
 
 const PunList: React.FC = () => {
   const [items, setItems] = useState<Pun[]>([]);
+  let [likedCount, setLikedCount] = React.useState(0);
+
+  let handleLike = (index: number) => {
+      setLikedCount(likedCount + 1);
+      dummyData[index].likes = likedCount;
+  }
+
+  const sortPunList = (data: any) => {
+    //sort list by number of likes
+    // data.sort((a, b) => {
+    //   return a.likes - b.likes;
+    // });
+    
+  };
 
   useEffect(() => {
     //get data from "api"
-    setItems(dummyData);
+    sortPunList(dummyData);
+    let items = {};
+    items = dummyData.map((item) => { 
+      const newItem = { ...item, likes: 0 };
+      return item; 
+    });
+    setItems(items);
 
   }, []);
 
@@ -63,7 +85,7 @@ const PunList: React.FC = () => {
       <h1>A PUN-TASTIC LIST</h1>
       <ul>
         {items.map((item, index) => (
-          <li key={index}>{item.pun}<Like /></li>
+          <li key={index}>{item.pun}<Like clickFunc={handleLike} likedCount={item.likes}/></li>
         ))}
       </ul>
     </div>
